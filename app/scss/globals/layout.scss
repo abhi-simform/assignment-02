@@ -1,0 +1,17 @@
+@use "../util" as *;
+@use "sass:math";
+
+.container {
+   width: min(100% - 3.125rem, 75rem);
+   margin-inline: auto;
+}
+
+section {
+   padding-block: rem(150);
+   @include breakpoint-down(md) {
+      padding-block: rem(100);
+   }
+   @include breakpoint-down(sm) {
+      padding-block: rem(70);
+   }
+}

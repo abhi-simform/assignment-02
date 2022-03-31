@@ -1,0 +1,47 @@
+@use "../util/" as *;
+
+.why {
+   background-color: var(--cream);
+}
+
+.why__text {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   @include breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.why__reasons {
+   margin-block-start: rem(75);
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: rem(36);
+   @include breakpoint-down(md) {
+      margin-block-start: rem(60);
+      grid-template-columns: repeat(2, 1fr);
+   }
+   @include breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.why__reason--image {
+   margin-block-end: rem(30);
+}
+
+.why__reason--title {
+   margin-block-end: rem(15);
+   font-size: rem(27);
+   line-height: rem(32);
+   @include breakpoint-down(sm) {
+      font-size: rem(24);
+   }
+}
+
+.why__reason--description {
+   font-weight: 400;
+   font-size: rem(16);
+   line-height: rem(26);
+}

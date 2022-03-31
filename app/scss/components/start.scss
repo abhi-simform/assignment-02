@@ -1,0 +1,61 @@
+@use "../util/" as *;
+
+.start {
+   background-image: url("../assets/images/start-bg.png");
+   background-position: center right;
+   background-size: cover;
+   padding-block: rem(150) rem(140);
+   @include breakpoint-down(sm) {
+      background-image: url("../assets/images/start-bg-mobile.png");
+      background-position: bottom right;
+      padding-block: rem(100);
+   }
+}
+
+.start-container {
+   text-align: center;
+}
+
+.start__title {
+   font-weight: 600;
+   color: var(--blue);
+   font-size: rem(60);
+   line-height: rem(70);
+   @include breakpoint-down(lg) {
+      font-size: (50);
+      line-height: rem(60);
+   }
+   @include breakpoint-down(sm) {
+      font-size: rem(45);
+      line-height: rem(55);
+   }
+}
+
+.start__buttons {
+   margin-block-start: rem(40);
+   @include breakpoint-down(sm) {
+      margin-block-start: rem(25);
+   }
+}
+
+.start__button {
+   display: inline-block;
+   width: rem(200);
+   margin-inline: rem(12.5);
+   padding-block: rem(12);
+   border-radius: 100px;
+   @include breakpoint-down(sm) {
+      margin-inline: auto;
+      margin-block: rem(15);
+   }
+}
+
+.start__button--build {
+   background: var(--blue);
+   color: white;
+}
+
+.start__button--partner {
+   background: var(--white);
+   color: var(--blue);
+}

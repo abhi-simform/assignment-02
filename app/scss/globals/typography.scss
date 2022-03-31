@@ -1,0 +1,54 @@
+@use "../util" as *;
+
+body {
+   color: var(--blue);
+}
+
+/* Removing default text decoration on anchor tag */
+a {
+   text-decoration: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* Setting body fonts */
+html {
+   font-family: var(--font-body);
+}
+
+/* Setting title fonts */
+h1,
+h2,
+h3 {
+   font-family: var(--font-title);
+}
+
+.title--primary {
+   font-size: rem(45);
+   line-height: rem(55);
+   font-weight: 600;
+   @include breakpoint-down(md) {
+      font-size: rem(38);
+   }
+   @include breakpoint-down(sm) {
+      font-size: rem(36);
+      line-height: rem(46);
+   }
+}
+
+.subtext {
+   font-weight: 700;
+   font-size: rem(16);
+   line-height: rem(24);
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   @include breakpoint-down(md) {
+      margin-block-end: rem(40);
+   }
+}

@@ -1,0 +1,118 @@
+@use "../util/" as *;
+
+.how__subtext {
+   margin-block-end: rem(25);
+}
+
+.how-container {
+   padding-block-end: rem(115);
+   @include breakpoint-down(lg) {
+      padding-block-end: rem(10);
+   }
+   @include breakpoint-down(sm) {
+      padding-block-end: 10rem;
+   }
+}
+
+.how__reason {
+   position: relative;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
+   gap: rem(140);
+   @include breakpoint-down(lg) {
+      gap: rem(80);
+   }
+   @include breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      &:nth-child(1) {
+         .reason__image {
+            width: rem(95);
+         }
+      }
+      &:nth-child(2) {
+         .reason__image {
+            margin-block-end: rem(-164);
+            width: rem(150);
+         }
+      }
+      &:nth-child(3) {
+         .reason__line {
+            height: rem(164);
+         }
+         .reason__image {
+            margin-block-end: rem(-240);
+            width: rem(210);
+         }
+      }
+      &:nth-child(4) {
+         .reason__line {
+            height: rem(222);
+         }
+         .reason__image {
+            margin-block-end: rem(-300);
+            width: rem(267);
+         }
+      }
+      &:nth-child(5) {
+         .reason__line {
+            height: rem(280);
+         }
+         .reason__image {
+            width: rem(325);
+            max-width: rem(325);
+         }
+      }
+   }
+   &:first-child {
+      .reason__line {
+         height: rem(75);
+      }
+   }
+}
+
+.reason__line {
+   position: relative;
+   height: rem(150);
+   width: rem(2);
+   left: rem(10);
+   background: var(--green);
+   margin-block-end: rem(25);
+}
+
+.reason__number {
+   font-size: rem(16);
+   line-height: rem(24);
+   margin-block-end: rem(15);
+}
+
+.reason__title {
+   font-size: rem(45);
+   line-height: rem(55);
+   margin-block-end: rem(30);
+   @include breakpoint-down(lg) {
+      font-size: rem(40);
+      line-height: rem(50);
+      margin-block-end: rem(25);
+   }
+   @include breakpoint-down(sm) {
+      font-size: rem(36);
+      line-height: rem(46);
+      margin-block-end: rem(20);
+   }
+}
+
+.reason__description {
+   font-size: rem(18);
+   line-height: rem(28);
+   margin-block-end: rem(25);
+}
+
+.reason__image {
+   max-width: 80%;
+   margin-inline: auto;
+   @include breakpoint-down(sm) {
+      margin-block-end: -150px;
+   }
+}

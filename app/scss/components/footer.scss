@@ -1,0 +1,76 @@
+@use "../util/" as *;
+
+.footer-container {
+   display: grid;
+   grid-template-columns: 1fr 4fr 1fr;
+   place-content: center;
+   place-items: center;
+   padding-block-end: rem(40);
+   @include breakpoint-down(xl) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+   }
+   @include breakpoint-down(sm) {
+      gap: 0;
+      padding-block-end: rem(50);
+   }
+}
+
+.footer__links {
+   display: grid;
+   grid-auto-flow: column;
+   gap: rem(30);
+   grid-column: 2/6;
+   @include breakpoint-down(sm) {
+      grid-auto-flow: row;
+      text-align: center;
+      padding-block-start: rem(92);
+      gap: rem(30);
+   }
+}
+
+.footer__link {
+   font-size: rem(12);
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   color: var(--blue);
+   font-weight: 700;
+}
+
+.footer__social {
+   display: grid;
+   grid-auto-flow: column;
+   gap: rem(30);
+   grid-column: 6/7;
+   align-items: center;
+   @include breakpoint-down(sm) {
+      padding-block-start: rem(75);
+   }
+}
+
+.footer__terms {
+   grid-column: 2/4;
+   margin-block-start: rem(50);
+   display: grid;
+   grid-auto-flow: column;
+   gap: rem(25);
+   font-size: rem(12);
+   line-height: rem(18);
+   @include breakpoint-down(xl) {
+      margin-block-start: rem(20);
+   }
+   @include breakpoint-down(sm) {
+      grid-auto-flow: row;
+      text-align: center;
+      gap: rem(20);
+      margin-block-start: rem(40);
+   }
+}
+
+.footer__terms--link {
+   color: hsla(230, 41%, 14%, 0.5);
+   span {
+      color: var(--blue);
+   }
+}
